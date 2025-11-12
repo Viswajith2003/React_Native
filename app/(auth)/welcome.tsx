@@ -48,6 +48,8 @@ export default function ExchWelcomeScreen() {
   const rotateAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
+    let rotation = 0; // track current rotation angle
+
     const interval = setInterval(() => {
       // Fade out and slide out current content (right to left)
       Animated.parallel([
@@ -67,10 +69,10 @@ export default function ExchWelcomeScreen() {
         // Update index
         setCurrentIndex((prev) => (prev + 1) % slides.length);
 
-        // Reset position to right side
+        // Reset slide to right
         slideAnim.setValue(width);
 
-        // Slide in from right and fade in new content
+        // Slide in new content
         Animated.parallel([
           Animated.timing(slideAnim, {
             toValue: 0,
@@ -87,9 +89,10 @@ export default function ExchWelcomeScreen() {
         ]).start();
       });
 
-      // Rotate octagon anticlockwise by 1/8th of a circle (45 degrees)
+      // 🔄 Rotate octagon anticlockwise (by 45°)
+      rotation -= 45;
       Animated.timing(rotateAnim, {
-        toValue: rotateAnim._value - 45,
+        toValue: rotation,
         duration: 500,
         easing: Easing.linear,
         useNativeDriver: true,

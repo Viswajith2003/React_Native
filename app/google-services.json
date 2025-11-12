@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "505885932708",
+    "project_id": "exch-91c27",
+    "storage_bucket": "exch-91c27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505885932708:android:33717ddf26a018feb83a31",
+        "android_client_info": {
+          "package_name": "com.exch.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWaCddEZhcv1pB4HwOpTWhUDx0hcPAx2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
