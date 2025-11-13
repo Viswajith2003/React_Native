@@ -1,5 +1,12 @@
-import WelcomeScreen from "./(auth)/welcome";
+import ExchVerifyOTP from "./(auth)/verifyOtp";
+import ExchLoginUI from "./(auth)/loginOtp";
 
 export default function Index() {
-  return <WelcomeScreen />;
+  return (
+    <view>
+      {/* <WelcomeScreen /> */}
+      <ExchVerifyOTP/>
+      <ExchLoginUI />
+    </view>
+  );
 }
